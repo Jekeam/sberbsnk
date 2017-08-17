@@ -1,0 +1,93 @@
+body {
+    font-family: "SeroPro", "HelveticaNeueCyr", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    min-width: 320px;
+}
+/*HEADER*/
+header {
+    height: 680px;
+    background-image: url("http://www.sberbank.ru/common/img/uploaded/openaccount/dist/assets/images/page-header-bg.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+nav {
+    height: 80px;
+    line-height: 80px;
+    background-color: rgba(255, 255, 255, 0.2);
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.navbar-header {
+    margin-bottom: 25px;
+}
+
+.menu li{
+    display: inline-block;
+    padding: 0 42px;
+}
+
+.menu li a {
+    /*color: #20AA2E;*/
+    color: black;
+    font-size: 17px;
+}
+
+.logo {
+    padding-top: 35px;
+}
+
+.title-block {
+    color: #394D5A;
+    text-align: center;
+    margin-top: 320px;
+}
+
+.title-block h1 {
+    font-weight: 400;
+    color: #394D5A;
+    font-size: 52px;
+    margin-bottom: 18px;
+}
+
+.title-block p {
+    color: #394D5A;
+    font-size: 21px;
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-size: 1.7rem;
+}
+
+
+/*Buttons*/
+.sber-btn {
+    color: #fff;
+    box-shadow: 0 7px 17px 0 #9CC5B3;
+    border-color: transparent;
+    background: linear-gradient(to bottom, #50b63d 0%, #36A277 100%);
+    min-width: 235px;
+    font-size: 1.25rem;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 40px;
+    border-radius: 100px;
+    white-space: nowrap;
+    font-weight: 500;
+    border: 0;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none !important;
+    transition: border-color .3s, background .3s, box-shadow .3s;
+    cursor: pointer;
+}
+
+/*HREF*/
+.sber-btn a {
+    font-size: 30px;
+    color: #fff !important;
+}
