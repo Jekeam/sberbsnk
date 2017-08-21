@@ -1,39 +1,166 @@
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {
+/* Large Devices, Wide Screens */
+@media(max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media(max-width : 992px) {
+
+
     nav {
-        height: 80px;
-        background-color: rgba(255, 255, 255, 0.2);
-        position: fixed;
+    height: 80px;
+    background-color: rgba(255, 255, 255, .9);
+    position: fixed;
     }
 
     .logo {
-        padding-top: 15px;
+    padding-top: 15px;
     }
 
     .menu_btn {
-        height: 40px;
-        width: 40px;
-        border-radius: 50% !important;
-        background-color: red !important;
+    height: 40px;
+    width: 40px;
+    border-radius: 50% !important;
+    /*/*background-color: red !important;*/*/
+    top: 10px;
+    }
+
+    .menu_btn span {
+    top: -17px;
     }
 
     #top_menu {
-        background-color: #fff;
+    
     }
 
     .menu li {
-        display: block;
-        text-align: center;
+    display: block;
+    text-align: center;
+    padding: 0 30px;
+    padding-top: 15px;
     }
 
-        .menu li a {
-            display: block;
-        }
+    .menu li a {
+        display: block;
+    }
 
     .title-block {
-        margin-top: 150px;
+    margin-top: 150px;
     }
 
+    .title-block p {
+        margin-bottom: 100px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media(max-width : 768px) {
+    .animated {
+        /*CSS transitions*/
+        -o-transition-property: none !important;
+        -moz-transition-property: none !important;
+        -ms-transition-property: none !important;
+        -webkit-transition-property: none !important;
+        transition-property: none !important;
+        /*CSS transforms*/
+        -o-transform: none !important;
+        -moz-transform: none !important;
+        -ms-transform: none !important;
+        -webkit-transform: none !important;
+        transform: none !important;
+        /*CSS animations*/
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -o-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+    }
+
+    nav {
+    height: 80px;
+    background-color: #FFF;
+    position: fixed;
+    }
+
+    .logo {
+    padding-top: 15px;
+    }
+
+    .menu_btn {
+    height: 40px;
+    width: 40px;
+    border-radius: 50% !important;
+    /*/*background-color: red !important;*/*/
+    top: 10px;
+    }
+
+    .menu_btn span {
+    top: -17px;
+    }
+
+    #top_menu {
+        background-color: #FFF;
+    }
+
+    .menu li {
+    display: block;
+    text-align: center;
+    }
+
+    .menu li a {
+    display: block;
+    }
+
+    .title-block {
+    margin-top: 150px;
+    }
+
+    .title-block p {
+    margin-bottom: 100px;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media(max-width : 480px) {
+
+    nav {
+    height: 80px;
+    background-color: #FFF;
+    position: fixed;
+    }
+
+    .logo {
+    padding-top: 15px;
+    }
+
+    .menu_btn {
+    height: 40px;
+    width: 40px;
+    border-radius: 50% !important;
+    /*background-color: red !important;*/
+    top: 10px;
+    }
+
+    .menu_btn span {
+    top: -17px;
+    }
+
+    #top_menu {
+    background-color: #FFF;
+    }
+
+    .menu li {
+    display: block;
+    text-align: center;
+    }
+
+    .menu li a {
+        display: block;
+    }
+
+    .title-block {
+    margin-top: 150px;
+    }
 
     .title-block p {
         margin-bottom: 100px;
@@ -41,41 +168,50 @@
 }
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px) {
+@media(max-width : 320px) {
+
     nav {
-        height: 80px;
-        background-color: rgba(255, 255, 255, 0.2);
-        position: fixed;
+    height: 80px;
+    background-color: #FFF;
+    position: fixed;
     }
 
     .logo {
-        padding-top: 15px;
+    padding-top: 15px;
     }
 
     .menu_btn {
-        height: 40px;
-        width: 40px;
-        border-radius: 50% !important;
-        background-color: red !important;
+    height: 40px;
+    width: 40px;
+    border-radius: 50% !important;
+    /*background-color: red !important;*/
+    top: 10px;
+    }
+
+    .menu_btn span {
+    top: -17px;
     }
 
     #top_menu {
-        background-color: #fff;
+    background-color: #FFF;
     }
 
     .menu li {
-        display: block;
-        text-align: center;
+    display: block;
+    text-align: center;
     }
 
-        .menu li a {
-            display: block;
-        }
+    .menu li a {
+    display: block;
+    }
+
+    .title-block {
+    margin-top: 150px;
+    }
+    .title-block p {
+    margin-bottom: 100px;
+    }
 }
-
-
-
-
 
 
 

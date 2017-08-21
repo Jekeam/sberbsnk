@@ -60,7 +60,16 @@
   <ItemGroup>
     <Content Include="app\static\app\content\main.css" />
     <Content Include="app\static\app\content\media.css" />
+    <Content Include="app\static\app\img\img-1.jpg" />
+    <Content Include="app\static\app\img\img-2.jpg" />
+    <Content Include="app\static\app\img\img-3.png" />
+    <Content Include="app\static\app\img\img-4.jpg" />
+    <Content Include="app\static\app\img\img-5.jpg" />
+    <Content Include="app\static\app\img\img-6.jpg" />
+    <Content Include="app\static\app\img\img-7.jpg" />
+    <Content Include="app\static\app\img\img-8.jpg" />
     <Content Include="app\static\app\img\page-header-bg.jpg" />
+    <Content Include="app\static\app\img\page-header-bg.png" />
     <Content Include="app\templates\app\index.html" />
     <None Include="FolderProfile.pubxml" />
     <Content Include="requirements.txt" />
