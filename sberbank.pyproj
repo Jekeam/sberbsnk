@@ -70,6 +70,7 @@
     <Content Include="app\static\app\img\img-8.jpg" />
     <Content Include="app\static\app\img\page-header-bg.jpg" />
     <Content Include="app\static\app\img\page-header-bg.png" />
+    <Content Include="app\templates\app\inc-login_form.html" />
     <Content Include="app\templates\app\index.html" />
     <None Include="FolderProfile.pubxml" />
     <Content Include="requirements.txt" />

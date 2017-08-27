@@ -1,0 +1,244 @@
+﻿<header>
+    <nav>
+              
+        <div class="container">
+            <div class="row">
+                <div class="navbar-header">
+                    <button class="navbar-toggle collapsed menu_btn" data-toggle="collapse" data-target="#top_menu">
+                        <span class="glyphicon glyphicon-align-justify"></span>
+                    </button>
+                    <a href="/" class="navbar-brand logo">
+                    <img src="http://www.sberbank.ru/portalserver/content/atom/contentRepository/content?id=35f8876c-36fe-48b6-83d0-1ec3388a22f3" width="175" height="44" alt="logo" />
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-left" id="top_menu">
+                    <ul class="navbar-nav mr-auto menu">
+                        <li class="nav-item"><a class="nav-link" href="#">Выгоды</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Статус</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Услуги</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Скидки</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="title-block">
+                    <h1>Ваш бизнес<br>всегда рядом</h1>
+                    <p>Получите комплекс дополнительных услуг для развития Вашего бизнеса!</p>
+                    <!--button class="sber-btn"><a href="#">Войти</a></button-->
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#mdLogin">Войти</button>
+
+                {% extends "inc-login_form.html" %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+
+<section class="param_s">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 col-sm-6">
+                <div class="param_block">
+                    <i class="fa fa-eercast" aria-hidden="true"></i>
+                    <h3>Заголовок значка 1</h3>
+                    <p>Любой текст заголовка значка  1</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="param_block">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <h3>Заголовок значка 2</h3>
+                    <p>Любой текст заголовка значка  2</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="param_block">
+                    <i class="fa fa-asterisk" aria-hidden="true"></i>
+                    <h3>Заголовок значка 3</h3>
+                    <p>Любой текст заголовка значка  3</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="param_block">
+                    <i class="fa fa-area-chart" aria-hidden="true"></i>
+                    <h3>Заголовок значка 4</h3>
+                    <p>Любой текст заголовка значка  4</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="param_block">
+                    <i class="fa fa-bolt" aria-hidden="true"></i>
+                    <h3>Заголовок значка 5</h3>
+                    <p>Любой текст заголовка значка  5</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="param_block">
+                    <i class="fa fa-battery-full" aria-hidden="true"></i>
+                    <h3>Заголовок значка 6</h3>
+                    <p>Любой текст заголовка значка  6</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="img_s">
+    <div class="container-fluid centered">
+        <div class="row">
+
+            <div class="col-md-3 col-sm-6 p0">
+                <div class="img_block">
+                <div class="img_wrap">
+                    <div class="img_descr">
+                        <h4>Услуга 1</h4>
+                        <p>Какое-то описание чего-то</p>
+                    </div>
+                </div>
+                <img src="{% static 'app/img/img-8.jpg' %}" class="img-responsive" alt="Услуга 1">
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 p0">
+                <div class="img_block">
+                <div class="img_wrap">
+                    <div class="img_descr">
+                        <h4>Услуга 2</h4>
+                        <p>Какое-то описание чего-то</p>
+                    </div>
+                </div>
+                <img src="{% static 'app/img/img-7.jpg' %}" class="img-responsive" alt="Услуга 2">
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 p0">
+                <div class="img_block">
+                <div class="img_wrap">
+                    <div class="img_descr">
+                        <h4>Услуга 3</h4>
+                        <p>Какое-то описание чего-то</p>
+                    </div>
+                </div>
+                <img src="{% static 'app/img/img-6.jpg' %}" class="img-responsive" alt="Услуга 3">
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 p0">
+                <div class="img_block">
+                <div class="img_wrap">
+                    <div class="img_descr">
+                        <h4>Услуга 4</h4>
+                        <p>Какое-то описание чего-то</p>
+                    </div>
+                </div>
+                <img src="{% static 'app/img/img-5.jpg' %}" class="img-responsive" alt="Услуга 4">
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 p0">
+                <div class="img_block">
+                <div class="img_wrap">
+                    <div class="img_descr">
+                        <h4>Услуга 5</h4>
+                        <p>Какое-то описание чего-то</p>
+                    </div>
+                </div>
+                <img src="{% static 'app/img/img-4.jpg' %}" class="img-responsive" alt="Услуга 5">
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 p0">
+                <div class="img_block">
+                <div class="img_wrap">
+                    <div class="img_descr">
+                        <h4>Услуга 6</h4>
+                        <p>Какое-то описание чего-то</p>
+                    </div>
+                </div>
+                <img src="{% static 'app/img/img-3.png' %}" class="img-responsive" alt="Услуга 6">
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 p0">
+                <div class="img_block">
+                <div class="img_wrap">
+                    <div class="img_descr">
+                        <h4>Услуга 7</h4>
+                        <p>Какое-то описание чего-то</p>
+                    </div>
+                </div>
+                <img src="{% static 'app/img/img-2.jpg' %}" class="img-responsive" alt="Услуга 7">
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 p0">
+                <div class="img_block">
+                <div class="img_wrap">
+                    <div class="img_descr">
+                        <h4>Услуга 8</h4>
+                        <p>Какое-то описание чего-то</p>
+                    </div>
+                </div>
+                <img src="{% static 'app/img/img-1.jpg' %}" class="img-responsive" alt="Услуга 8">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="status_s">
+    <div class="container">
+        <div class="row centered">
+            <div class="col-md-4 col-sm-4">
+                <div class="status_item">
+                    <i class="fa fa-battery-half tilt" aria-hidden="true"></i>
+                    <!--img src="{% static 'app/img/'%}"/-->
+                    <h4>Classic</h4>
+                    <p>Какое то описание</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+                <div class="status_item">
+                    <i class="fa fa-battery-three-quarters tilt" aria-hidden="true"></i>
+                    <!--img src="{% static 'app/img/'%}"/-->
+                    <h4>Gold</h4>
+                    <p>Какое то описание</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+                <div class="status_item">
+                    <i class="fa fa-battery-full tilt" aria-hidden="true"></i><!--img src="{% static 'app/img/'%}"/-->
+                    <h4>Elite</h4>
+                    <p>Какое то описание</p>
+                </div>
+            </div>
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#mdLogin" data-whatever="@mdLogin">Войти</button>
+        </div>
+    </div>
+</section>
+
+
+{% block footer%}
+{% endblock %}

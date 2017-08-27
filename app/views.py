@@ -19,6 +19,16 @@ def home(request):
         }
     )
 
+
+def mylogin(request):
+    if request.method == 'POST':
+        pass
+
+
+def mylogout(request):
+    pass
+
+
 def contact(request):
     """Renders the contact page."""
     assert isinstance(request, HttpRequest)
