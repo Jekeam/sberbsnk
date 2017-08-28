@@ -70,9 +70,11 @@
     <Content Include="app\static\app\img\img-8.jpg" />
     <Content Include="app\static\app\img\page-header-bg.jpg" />
     <Content Include="app\static\app\img\page-header-bg.png" />
+    <Content Include="app\templates\app\base.html" />
     <Content Include="app\templates\app\inc-login_form.html" />
     <Content Include="app\templates\app\index.html" />
     <None Include="FolderProfile.pubxml" />
+    <Content Include="app\templates\app\mylogin.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
@@ -101,7 +103,7 @@
     <Content Include="app\templates\app\contact.html" />
     <Content Include="app\templates\app\index.html_back" />
     <Content Include="app\templates\app\layout.html" />
-    <Content Include="app\templates\app\login.html" />
+    <Content Include="app\templates\app\office.html" />
     <Content Include="app\templates\app\loginpartial.html" />
   </ItemGroup>
   <ItemGroup>

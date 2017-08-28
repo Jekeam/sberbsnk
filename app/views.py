@@ -1,9 +1,8 @@
-"""
-Definition of views.
-"""
-
+from django.contrib import auth
 from django.shortcuts import render
 from django.http import HttpRequest
+from django.http import HttpResponseRedirect
+from django.http import Http404
 from django.template import RequestContext
 from datetime import datetime
 
@@ -14,43 +13,38 @@ def home(request):
         request,
         'app/index.html',
         {
-            'title':'Home Page',
+            'title':'Главная',
             'year':datetime.now().year,
         }
     )
 
-
-def mylogin(request):
+def login(request):
     if request.method == 'POST':
-        pass
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = auth.authenticate(username = username, password = password)
+        if user:
+            auth.login(request, user)
+            return HttpResponseRedirect('/office.html')
+        else:
+            return render(request, 'app/index.html', {'username':username, 'errors': True})
+    raise Http404
 
 
-def mylogout(request):
-    pass
+def logout(request):
+    if request.method == 'POST':
+        auth.logout(request)
+        return HttpResponseRedirect('/')
+    raise Http404
 
 
-def contact(request):
-    """Renders the contact page."""
+def office(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/contact.html',
+        'app/office.html',
         {
-            'title':'Contact',
-            'message':'Your contact page.',
-            'year':datetime.now().year,
-        }
-    )
-
-def about(request):
-    """Renders the about page."""
-    assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'app/about.html',
-        {
-            'title':'About',
-            'message':'Your application description page.',
+            'title':'Офис',
             'year':datetime.now().year,
         }
     )
