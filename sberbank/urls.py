@@ -12,7 +12,8 @@ import app.views
 # Uncomment the next lines to enable the admin:
 from django.conf.urls import include
 from django.contrib import admin
-from app.models import Client
+from app.models import Statuse
+from app.models import Balance
 admin.autodiscover()
 
 urlpatterns = [

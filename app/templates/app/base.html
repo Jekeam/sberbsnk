@@ -11,7 +11,31 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous" />
 </head>
 <body>
-    <header>
+    <header class="{{header_class}}">
+        <nav>
+            <div class="container">
+                <div class="row">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle collapsed menu_btn" data-toggle="collapse" data-target="#top_menu">
+                            <span class="glyphicon glyphicon-align-justify"></span>
+                        </button>
+                        <a href="/" class="navbar-brand logo">
+                        <img src="http://www.sberbank.ru/portalserver/content/atom/contentRepository/content?id=35f8876c-36fe-48b6-83d0-1ec3388a22f3" width="175" height="44" alt="logo" />
+                        </a>
+                    </div>
+
+                    <div class="collapse navbar-collapse navbar-left" id="top_menu">
+                        <ul class="navbar-nav mr-auto menu">
+                            <li class="nav-item"><a class="nav-link" href="/#">Выгоды</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/#">Скидки</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/#">Услуги</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/#">Статус</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/office.html">Кабинет</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
         {% block header %}
         {% endblock %}
     </header>

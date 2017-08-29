@@ -15,6 +15,7 @@ def home(request):
         {
             'title':'Главная',
             'year':datetime.now().year,
+            'header_class':'landing',
         }
     )
 
@@ -27,7 +28,13 @@ def login(request):
             auth.login(request, user)
             return HttpResponseRedirect('/office.html')
         else:
-            return render(request, 'app/index.html', {'username':username, 'errors': True})
+            return render(request, 
+                          'app/index.html', 
+                          {
+                              'username':username, 
+                              'errors': True,
+                              'header_class':'landing',
+                          })
     raise Http404
 
 
@@ -44,7 +51,8 @@ def office(request):
         request,
         'app/office.html',
         {
-            'title':'Офис',
+            'title':'Кабинет',
             'year':datetime.now().year,
+            'header_class':'office',
         }
     )

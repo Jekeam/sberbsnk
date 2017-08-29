@@ -26,9 +26,16 @@ i {
 }
 
 /*HEADER*/
-header {
+header.landing {
     height: 680px;
     background-image: url("http://www.sberbank.ru/common/img/uploaded/openaccount/dist/assets/images/page-header-bg.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+header.office {
+    height: 680px;
+    background-image: url("/static/app/img/5.jpg");
     -webkit-background-size: cover;
     background-size: cover;
 }
