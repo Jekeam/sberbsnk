@@ -22,13 +22,3 @@
     </div>
     </div>
 </div>
-{% if user.is_authenticated %}
-    {{user.username}}
-    <form method="POST" action="/user/logout">{% csrf_token %}
-        <input type="submit" class="btn btn-default" value="Выйти" />
-    </form>
-{% else %}
-    {% if errors %}
-        <br>Неверный логин или пароль
-    {% endif %}
-{% endif %}

@@ -34,7 +34,7 @@ header.landing {
 }
 
 header.office {
-    height: 680px;
+    height: 80px;
     background-image: url("/static/app/img/5.jpg");
     -webkit-background-size: cover;
     background-size: cover;
@@ -127,6 +127,13 @@ nav {
     padding: 50px;
     background-color: #3EAC51;
 }
+
+.param_o {
+    padding: 50px;
+    background-color: #e0e0e0;
+    opacity: 1;
+}
+
 
 .param_block {
     text-align: center;

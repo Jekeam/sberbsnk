@@ -4,9 +4,56 @@
 	{{title}}
 {% endblock %}
 
-{% block header %}
-{% load staticfiles %}
-{% endblock %}
-
 {% block sections %}
+
+<section class="param_o">
+    <div class="container">
+        <div class="row centered">
+
+            <div class="col-md-12">
+                <div class="param_block">
+                    <h3>Статус 
+                    {% for status in statuse %}
+                    <a href="#">{{status}}</a>
+                    {% endfor %}
+                    </h3>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="param_o">
+    <div class="container">
+        <div class="row centered">
+
+            <div class="col-md-12">
+                <div class="param_block">
+                    <h3>Баланс <a href="#">{{balance.balance}}</a></h3>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="param_o">
+    <div class="container">
+        <div class="row centered">
+
+            <div class="col-md-12">
+                <div class="param_block">
+                    <h3>До следующего уровня осталось <a href="#">{{next_status}}</a></h3>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
 {% endblock %}
