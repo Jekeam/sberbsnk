@@ -5,8 +5,7 @@ from django.http import HttpResponseRedirect
 from django.http import Http404
 from django.template import RequestContext
 from datetime import datetime
-from app.models import Statuse
-from app.models import Balance
+from app.models import Statuse, Balance, Service
 
 def home(request):
     """Renders the home page."""
@@ -49,21 +48,34 @@ def logout(request):
 
 def office(request):
     if request.user.is_authenticated():
+        #Статусы
         try:
             statuse = Statuse.objects.all()
         except:
             statuse = None
+        #Текущий баланс
         try:
             balance = Balance.objects.get( user_id = request.user.id)
+            cur_balance = balance.balance
+            #Статус юзера
+            cur_status = balance.status_id
         except:
-            balance = None
+            cur_balance = None
+            cur_status = None
+        #Следующий статус
         try:
-            cur_status = Statuse.objects.get( status = balance.status_id )
+             status = Statuse.objects.get( status = balance.status_id )
+             status_max = status.max
+             next_status = status_max-cur_balance if status_max-cur_balance > 0 else 0
         except:
-            statuse = None
+            next_status = None
+        #Получим список возможных услуг
+        try:
+            services = Service.objects.filter(service_statuse = cur_status)
+        except:
+            services = None
+
         #assert isinstance(request, HttpRequest)
-        print(balance.balance)
-        print(cur_status.max)
         return render(
             request,
             'app/office.html',
@@ -72,8 +84,43 @@ def office(request):
                 'year':datetime.now().year,
                 'header_class':'office',
                 'statuse': statuse,
-                'balance': balance,
-                'next_status': cur_status.max-balance.balance,
+                'cur_balance': cur_balance,
+                'next_status': next_status,
+                'services': services,
             }
         )
+    raise Http404
+
+def status(request):
+    if request.method == 'GET':
+        if request.user.is_authenticated():
+            get_status = request.GET.get('status_id')
+            print(str(get_status))
+            #Описание статуса
+            try:
+                get_status_desc = Statuse.objects.filter(status = get_status)
+            except:
+                get_status_desc = None
+
+            #Получим список возможных услуг
+            try:
+                services = Service.objects.filter(service_statuse = get_status)
+            except:
+                services = None
+
+            print(str(get_status_desc))
+            print(str(services))
+
+            return render(
+            request,
+            'app/status.html',
+            {
+                'title':'Статус',
+                'year':datetime.now().year,
+                'header_class':'office',
+                'get_status_desc': get_status_desc,
+                'services': services,
+            }
+        )
+        raise Http404
     raise Http404

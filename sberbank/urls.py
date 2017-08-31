@@ -12,8 +12,7 @@ import app.views
 # Uncomment the next lines to enable the admin:
 from django.conf.urls import include
 from django.contrib import admin
-from app.models import Statuse
-from app.models import Balance
+#from app.models import Statuse, Balance, Statuse
 admin.autodiscover()
 
 urlpatterns = [
@@ -22,4 +21,5 @@ urlpatterns = [
     url(r'^user/login', app.views.login),
     url(r'^user/logout', app.views.logout),
     url(r'^office', app.views.office),
+    url(r'^status/', app.views.status),
 ]

@@ -1,0 +1,46 @@
+{% extends "app/base.html" %}
+
+{% block title %}
+	{{title}}
+{% endblock %}
+
+{% block sections %}
+
+    {% if get_status_desc %}
+        <section class="param_o">
+            <div class="container">
+                <div class="row centered">
+
+                    <div class="col-md-12">
+                        <div class="param_block">
+                                {% for desc in get_status_desc%}
+                                    <h3>Статус {{desc}}</h3>
+                                    <p>До {{desc.max}} баллов</p>
+                                    <h4>Описание</h4>
+                                    <p>{{desc.status_desc}}</p>
+                                    <br>
+                                    <br>
+                                {% endfor %}
+                                {% if services %}
+                                    <h4>Услуги</h4>
+                                    {% for service in services %}
+                                        <ul>
+                                            <li>
+                                                <a href="#">{{service.service_name}}</a>
+                                                <p>Стоимость услуги:{{service.service_price}}</p>
+                                                <p>{{service.service_desc}}</p>
+                                                <br>
+                                                <br>
+                                            </li>
+                                        </ul>
+                                    {% endfor %}
+                                {% endif %}
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    {% endif %}
+{% endblock %}
