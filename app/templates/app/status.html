@@ -5,34 +5,47 @@
 {% endblock %}
 
 {% block sections %}
-
+<div class="bg_office">
     {% if get_status_desc %}
         <section class="param_o">
             <div class="container">
                 <div class="row centered">
 
-                    <div class="col-md-12">
+                    <div class="col-md-5 col-sm-5 col-md-offset-3 col-sm-offset-3">
                         <div class="param_block">
                                 {% for desc in get_status_desc%}
-                                    <h3>Статус {{desc}}</h3>
+                                    {% if desc|upper == 'CLASSIC' %}
+                                        <i class="fa fa-battery-half" aria-hidden="true"></i>
+                                    {% endif %}
+
+                                    {% if desc|upper == 'GOLD' %}
+                                        <i class="fa fa-battery-three-quarters" aria-hidden="true"></i>
+                                    {% endif %}
+
+                                    {% if desc|upper == 'ELITE' %}
+                                        <i class="fa fa-battery-full" aria-hidden="true"></i>
+                                    {% endif %}                                    
+                                    <h3>Статус {{desc|upper}}</h3>
                                     <p>До {{desc.max}} баллов</p>
+                                    <br>
                                     <h4>Описание</h4>
                                     <p>{{desc.status_desc}}</p>
                                     <br>
                                     <br>
                                 {% endfor %}
                                 {% if services %}
-                                    <h4>Услуги</h4>
+                                    <h3>Услуги</h3>
                                     {% for service in services %}
+                                    <div class="status_item_o">
                                         <ul>
                                             <li>
                                                 <a href="#">{{service.service_name}}</a>
-                                                <p>Стоимость услуги:{{service.service_price}}</p>
+                                                <p>Стоимость услуги: {{service.service_price}}</p>
                                                 <p>{{service.service_desc}}</p>
-                                                <br>
-                                                <br>
                                             </li>
                                         </ul>
+                                    </div>
+                                    <br>
                                     {% endfor %}
                                 {% endif %}
                         </div>
@@ -43,4 +56,5 @@
             </div>
         </section>
     {% endif %}
+</div>
 {% endblock %}

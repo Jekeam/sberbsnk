@@ -16,6 +16,23 @@ i {
     text-shadow: black 0 0 10px;
 }
 
+.shadow {
+    box-shadow: 0 0 5px rgba(0,0,0,0.5); /* Параметры тени */
+}
+
+li:hover {
+    text-decoration: none;
+    color: #3EAC51
+}
+
+ul {
+    list-style-type: none
+}
+
+li {
+     text-align: left;
+}
+
 /*mdLogin*/
 #mdLogin {
     
@@ -35,7 +52,7 @@ header.landing {
 
 header.office {
     height: 80px;
-    background-image: url("/static/app/img/5.jpg");
+    background-image: url("/static/app/img/4.jpg");
     -webkit-background-size: cover;
     background-size: cover;
 }
@@ -123,13 +140,21 @@ nav {
 
 
 /*Parametrs section*/
+/*HEADER*/
+.bg_office {
+    background-image: url("/static/app/img/4.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+
 .param_s {
     padding: 50px;
     background-color: #3EAC51;
 }
 
 .param_o {
-    padding: 50px;
+    padding: 15px;
     background-color: #e0e0e0;
     opacity: 1;
 }
@@ -146,7 +171,6 @@ nav {
 }
 
 .param_block h3 {
-    text-transform: uppercase;
     font-size: 27px;
     font-weight: 400;
  }
@@ -155,6 +179,12 @@ nav {
     font-size: 16px;
     font-weight: 400;
 }
+
+
+/*OFFICE*/
+.balace h4 {
+    padding: 20px 0;
+ }
 
 
 /*Images section*/
@@ -207,14 +237,14 @@ nav {
 
 /*SECTION STATUS_S*/
 .status_s {
-    padding: 40px 0;
+    padding: 50px 0;
     background-color: #e0e0e0;
 }
 
 .status_item {
     text-align: center;
     padding-bottom: 35px;
-    padding-top: 25px;
+    padding-top: 50px;
 }
 
 .status_item h4 {
@@ -225,6 +255,36 @@ nav {
 
 .status_item i {
     font-size: 150px;
+}
+
+
+/*OFFICE*/
+.status_item_o {
+    padding: 15px 0;
+    border-style: solid;
+    border-color:rgba(62, 172, 81, 0.00);
+    border-width: 4px;
+}
+
+.status_item_o:hover {
+    border-style: solid;
+    border-color:#3EAC51;
+    border-width: 4px;
+}
+
+.status_item_o i {
+    font-size: 80px;
+}
+
+.status_item_o h4 {
+    font-size: 16px;
+    position: center;
+    color:#444443;
+    font-weight: 600;
+}
+
+.row a:hover {
+    text-decoration: none;
 }
 
 .status_item p {

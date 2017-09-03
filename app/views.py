@@ -75,6 +75,14 @@ def office(request):
         except:
             services = None
 
+        #Текущий статус
+        try:
+            balance = Balance.objects.get( user_id = request.user.id)
+            #Статус юзера
+            cur_status = balance.status_id
+        except:
+            cur_status = None
+
         #assert isinstance(request, HttpRequest)
         return render(
             request,
@@ -85,6 +93,7 @@ def office(request):
                 'header_class':'office',
                 'statuse': statuse,
                 'cur_balance': cur_balance,
+                'cur_status': cur_status,
                 'next_status': next_status,
                 'services': services,
             }
@@ -107,9 +116,6 @@ def status(request):
                 services = Service.objects.filter(service_statuse = get_status)
             except:
                 services = None
-
-            print(str(get_status_desc))
-            print(str(services))
 
             return render(
             request,

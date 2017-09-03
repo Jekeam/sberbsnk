@@ -7,52 +7,69 @@
 {% block sections %}
 
 {% if statuse %}
-    <section class="param_o">
+<div class="bg_office">
+    <section class="status_o">
         <div class="container">
             <div class="row centered">
 
-                <div class="col-md-12">
-                    <div class="param_block">
-                        <h3>Статус 
-                        {% for status in statuse %}
-                        <a href="/status?status_id={{status.href}}">{{status}}</a>
-                        {% endfor %}
-                        </h3>
+                {% for status in statuse %}
+                    <div class="col-md-4 col-sm-4">
+                        <div class="status_item_o shadow">
+                            <a href="/status?status_id={{status.href}}">
+
+                                {% if status.href == 'classic' %}
+                                    <i class="fa fa-battery-half" aria-hidden="true"></i>
+                                {% endif %}
+
+                                {% if status.href == 'gold' %}
+                                    <i class="fa fa-battery-three-quarters" aria-hidden="true"></i>
+                                {% endif %}
+
+                                {% if status.href == 'elite' %}
+                                    <i class="fa fa-battery-full" aria-hidden="true"></i>
+                                {% endif %}
+                            
+                                {% if status|upper == cur_status|upper %}
+                                    <h4>Ваш статус: {{status|upper}}</h4>
+                                {% else %}
+                                    <h4>{{status|upper}}</h4>
+                                {% endif %}
+
+                            </a>
+                        </div>
                     </div>
-                </div>
+                {% endfor %}
 
             </div>
-
         </div>
     </section>
+
 {% endif %}
+
 
 {% if cur_balance %}
     <section class="param_o">
         <div class="container">
             <div class="row centered">
 
-                <div class="col-md-12">
-                    <div class="param_block">
-                        <h3>Баланс <a href="#">{{cur_balance}}</a></h3>
-                    </div>
+                <div class="col-md-4 col-md-offset-2">
+                    <a href="#">
+                        <div class="status_item_o balace shadow">
+                            <h4>Ваш баланс: {{cur_balance}}</h4>
+                        </div>
+                    </a>
                 </div>
 
-            </div>
-
-        </div>
-    </section>
 {% endif %}
 
 {% if next_status %}
-    <section class="param_o">
-        <div class="container">
-            <div class="row centered">
 
-                <div class="col-md-12">
-                    <div class="param_block">
-                        <h3>До следующего уровня осталось <a href="#">{{next_status}}</a></h3>
-                    </div>
+                <div class="col-md-4">
+                    <a href="#">
+                        <div class="status_item_o balace shadow">
+                            <h4>До следующего уровня осталось {{next_status}}</h4>
+                        </div>
+                    </a>
                 </div>
 
             </div>
@@ -67,12 +84,12 @@
         <div class="container">
             <div class="row centered">
 
-                <div class="col-md-12">
-                    <div class="param_block">
-                        <h3>Последние услуги</h3>
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="status_item_o shadow">
+                        <h4>Последние услуги:</h4>
                         {% for service in services %}
                             <ul>
-                                <li><a href="#">{{service.service_name}}</a></li>
+                                <a href="#"><li>{{service.service_name}}</li></a>
                             </ul>
                         {% endfor %}
                     </div>
@@ -85,12 +102,12 @@
 {% endif %}
 
 
-<section class="status_s">
-    <div class="container">
-        <div class="row centered">
-            <button type="button" class="btn btn-success">Настройки</button>
+    <section class="status_o">
+        <div class="container">
+            <div class="row centered">
+                <button type="button" class="btn btn-success">Настройки</button>
+            </div>
         </div>
-    </div>
-</section>
-
+    </section>
+</div>
 {% endblock %}
