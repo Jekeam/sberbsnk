@@ -63,14 +63,14 @@ header.landing {
 
 header.office {
     height: 80px;
-    background-image: url("/static/app/img/4.jpg");
+    background-image: url("/static/app/img/0.jpg");
     -webkit-background-size: cover;
     background-size: cover;
 }
 
 /*Parametrs section*/
 .bg_office {
-    background-image: url("/static/app/img/4.jpg");
+    background-image: url("/static/app/img/0.jpg");
     -webkit-background-size: cover;
     background-size: cover;
     z-index: 9;

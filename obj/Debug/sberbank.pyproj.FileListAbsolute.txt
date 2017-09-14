@@ -1,1 +1,2 @@
 C:\projects\ul\obj\Debug\sberbank.pyproj.CoreCompileInputs.cache
+C:\projects\sberbank\trunk\obj\Debug\sberbank.pyproj.CoreCompileInputs.cache
