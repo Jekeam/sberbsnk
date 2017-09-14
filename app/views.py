@@ -10,6 +10,12 @@ from app.models import Statuse, Balance, Service
 def home(request):
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
+
+    try:
+        first_name = request.user.first_name
+    except:
+        first_name = None
+
     return render(
         request,
         'app/index.html',
@@ -17,6 +23,7 @@ def home(request):
             'title':'Главная',
             'year':datetime.now().year,
             'header_class':'landing',
+            'org_name': first_name,
         }
     )
 
@@ -34,7 +41,7 @@ def login(request):
                           {
                               'username':username, 
                               'errors': True,
-                              'header_class':'landing'
+                              'header_class':'landing',
                           })
     raise Http404
 
@@ -84,6 +91,11 @@ def office(request):
             cur_status = None
 
         #assert isinstance(request, HttpRequest)
+        try:
+            first_name = request.user.first_name
+        except:
+            first_name = None
+
         return render(
             request,
             'app/office.html',
@@ -96,6 +108,7 @@ def office(request):
                 'cur_status': cur_status,
                 'next_status': next_status,
                 'services': services,
+                'org_name': first_name
             }
         )
     raise Http404

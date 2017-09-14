@@ -4,6 +4,13 @@
 	{{title}}
 {% endblock %}
 
+
+{% block row_nav %}
+    {% if user.is_authenticated %}
+        
+    {% endif %}
+{% endblock %}
+
 {% block sections %}
 
 {% if statuse %}

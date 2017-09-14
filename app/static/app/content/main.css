@@ -20,19 +20,30 @@ i {
     box-shadow: 0 0 5px rgba(0,0,0,0.5); /* Параметры тени */
 }
 
+
 li:hover {
     text-decoration: none;
     color: #3EAC51
 }
-
+/*
 ul {
-    list-style-type: none
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
 }
 
 li {
-     text-align: left;
+     text-align: center;
 }
 
+.nav-block {
+    display: inline-block;
+}
+
+.nav-tabs {
+    border-bottom: none !important;
+}
+*/
 /*mdLogin*/
 #mdLogin {
     
@@ -52,19 +63,23 @@ header.landing {
 
 header.office {
     height: 80px;
-    background-image: url("/static/app/img/4.jpg");
+    background-image: url("/static/app/img/0.jpg");
     -webkit-background-size: cover;
     background-size: cover;
 }
 
 /*Parametrs section*/
 .bg_office {
-    background-image: url("/static/app/img/4.jpg");
+    background-image: url("/static/app/img/0.jpg");
     -webkit-background-size: cover;
     background-size: cover;
     z-index: 9;
 }
 
+nav {
+    z-index: 999;
+}
+/*
 nav {
     height: 80px;
     line-height: 80px;
@@ -75,7 +90,8 @@ nav {
     width: 100%;
     z-index: 999;
 }
-
+*/
+/*
 .navbar-header {
     margin-bottom: 24px;
 }
@@ -86,14 +102,10 @@ nav {
 }
 
 .menu li a {
-    /*color: #20AA2E;*/
     color: black;
     font-size: 17px;
 }
-
-.logo {
-    padding-top: 35px;
-}
+*/
 
 .title-block {
     color: #394D5A;

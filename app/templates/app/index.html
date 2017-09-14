@@ -4,6 +4,13 @@
 	{{title}}
 {% endblock %}
 
+{% block row_nav %}
+<ul class="nav navbar-nav">
+    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+    <li><a href="#">Link</a></li>
+</ul>
+{% endblock %}
+
 {% block header %}
 {% load staticfiles %}
 
@@ -14,16 +21,7 @@
                 <h1>Ваш бизнес<br>всегда рядом</h1>
                 <p>Получите комплекс дополнительных услуг для развития Вашего бизнеса!</p>
                 <!--button class="sber-btn"><a href="#">Войти</a></button-->
-            {% if user.is_authenticated %}
-                <form method="POST" action="/user/logout">{% csrf_token %}
-                    <input type="submit" class="btn btn-default" value="Выйти" />
-                </form>
-            {% else %}
-                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#mdLogin">Войти</button>
-                {% if errors %}
-                    <br>Неверный логин или пароль
-                {% endif %}
-            {% endif %}
+            {% include "app/btn-login.html" %}
 
             {% include "app/inc-login_form.html" %}
 
@@ -223,7 +221,7 @@
                     <p>Какое то описание</p>
                 </div>
             </div>
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#mdLogin" data-whatever="@mdLogin">Войти</button>
+            {% include "app/btn-login.html" %}
         </div>
     </div>
 </section>

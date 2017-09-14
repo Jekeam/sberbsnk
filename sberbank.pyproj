@@ -92,7 +92,9 @@
     <Content Include="app\static\app\img\page-header-bg.jpg" />
     <Content Include="app\static\app\img\page-header-bg.png" />
     <Content Include="app\templates\app\base.html" />
+    <Content Include="app\templates\app\btn-login.html" />
     <Content Include="app\templates\app\inc-login_form.html" />
+    <Content Include="app\templates\app\nav-dropdowns.html" />
     <Content Include="app\templates\app\status.html" />
     <Content Include="app\templates\app\index.html" />
     <None Include="FolderProfile.pubxml" />
